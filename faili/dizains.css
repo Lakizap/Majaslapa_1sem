@@ -1,0 +1,183 @@
+header {
+	height: 300px;
+	background: #000000;
+	text-align: center;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.modal-content{
+	width: 400px;
+	text-align: center;
+}
+
+.modal {
+  text-align: center;
+}
+
+.modal-dialog {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.modal-content {
+  margin: 0 auto;
+}
+
+.form-group{
+	max-width: 600px;
+}
+
+.alert{
+	max-width: 600px;
+}
+
+.izvelnes_skats{
+    padding: 10px;
+	margin-right:5%;
+	margin-left:5%;
+}
+
+.izvelnes_skats_mazs{
+    margin-top: 50px;
+	margin-bottom: 50px;
+    padding: 10px;
+	margin-right:15%;
+	margin-left:15%;
+}
+
+.izvelnes_galerija_atteli{
+	text-align: center;
+}
+
+.izvelnes_galerija_atteli p {
+    color: green;
+	font-size: 150%;
+}
+
+.cv_skats{
+	padding: 10px;
+	margin-right:10%;
+	margin-left:10%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.cv_skats_cv{
+	text-align:center;
+}
+
+.cv_skats_teksts{
+	margin-left:10%;
+}
+
+h1 {
+    font-size: 175%;
+}
+
+h2 {
+    font-size: 120%;
+}
+
+h3 {
+    font-size: 110%;
+}
+
+p {
+    font-size: 100%;
+}
+
+pt {
+    font-size: 100%;
+	font-weight: bold;
+}
+
+#googleMap{
+	float:right;
+	margin:15px;
+	border-radius: 30px;
+}
+
+#googleapr{
+	float:right;
+	margin: -15px 50px;
+}
+
+img.lidmod{
+	float:right;
+	margin:4px;
+	margin-top:2px;
+}
+
+img.portrets{
+	position: absolute;
+    left: 210px;
+    top: -10px;
+}
+.galerija{
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 800px;
+	margin: auto;
+}
+
+.navbar-default {
+	background-color: #66cc00;
+	border-color: #66cc00;
+}
+
+.navbar-default .navbar-brand {
+	color: #000000;
+	font-weight: bold;
+	text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #000000;
+	text-shadow: 0 0 3px #ffffff, 0 0 5px #000000;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	background-color: #cdff00;
+}
+
+ .navbar-default .navbar-nav > .active > a, 
+ .navbar-default .navbar-nav > .active > a:hover, 
+ .navbar-default .navbar-nav > .active > a:focus {
+	background: #cdff00;
+ }
+
+ .navbar-default .navbar-nav > .active > a, 
+ .navbar-default .navbar-nav > .active > li > a:hover, 
+ .navbar-default .navbar-nav > .active > li > a:focus {
+	background: #9EFF00;
+ }
+ 
+.navbar-right{
+    left: 0;
+    margin: 0 40px;
+}
+
+#footer {
+	max-width: 100%;
+	background: #000000;
+	color: #A4A4A4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#footer-wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+}
+
+footer{
+	margin-top: 40px;
+}

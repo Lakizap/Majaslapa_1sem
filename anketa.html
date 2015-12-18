@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Raivis Akitis D3-3</title>
+	<meta charset="UTF-8">
+	<link rel="icon" href="faili/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<header>
+		<div>
+			<img src="faili/logo.jpg"width="200px" height="auto">
+		</div>
+	</header>
+	
+	<link rel="stylesheet" href="faili/boostrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="faili/html5-reset.css">
+	<script src='faili/jQuery/jquerys.js'></script>
+	<script src="faili/boostrap/js/bootstrap.min.js"></script>
+	<script src="faili/skripti.js"></script>
+	<link rel="stylesheet" href="faili/dizains.css">
+	
+	<style>
+		body{background-image:url(faili/back.png)}
+	</style>
+	
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Izvelne</a>
+  </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href = "index.html">Galvena lapa</a></li>
+	  <li><a href = "galerija.html">Galerija</a></li>
+	  <li  class="active"><a href = "anketa.html">Anketa</a></li>
+	  <li><a href = "kontakti.html">Kontakti</a></li>
+	  <li><a href = "cv.html">CV</a></li>
+        </ul>
+		<div class="btn-nav navbar-right">
+		<a class="btn btn-primary navbar-btn btn-info" onClick="pieslegsanas();">Pieslēgties</a>
+		</div>
+  </div>
+</nav>
+
+				<div id="pieslogs" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								 <h3 class="modal-title" id="logins">Pieslēgšanās</h3>
+							</div>
+							<div class="modal-body">
+								<p><input type="text" name="epastslog" id="log_epasts" placeholder="E-pasts" /></p><br>
+								<p><input type="password" name="parolelog" id="log_parole" placeholder="Parole" /></p><br>
+								<p>
+								<button type="submit" onclick="return ielogosanaspoga()" class="btn btn-primary">Ieiet</button>
+										<input id="login-remember" type="checkbox" name="remember" value="1"> Atcerēties mani
+								</p><br>
+								<a href="aaa;">Nevari pievienoties?</a>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<p>
+									<a href="javascript:;" class="btn btn-primary" onClick="registracija();">Reģistrējies</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="reglogs" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								<h3>Reģistrācija</h3>
+							</div>
+							<div class="modal-body">
+									<fieldset class="form-group">
+										<label>E-pasts</label>
+										<input id="iev_epasts" type="text" name="epasts" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Vārds</label>
+										<input id="iev_vards" type="text" name="vards" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Uzvārds</label>
+										<input id="iev_uzvards" type="text" name="uzvards" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Parole</label>
+										<input id="iev_parole" type="password" maxlength="24" name="parole" value=""/>
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Atkārtota Parole</label>
+										<input id="iev_parole2" type="password" maxlength="24" name="parole" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Vīrietis</label>
+										<input id="iev_dzimums" onClick="" type="radio" name="dzimums" checked />
+										<label>Sieviete</label>
+										<input id="iev_dzimums" onClick="" type="radio" name="dzimums" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Tālrunis</label>
+										<input id="iev_talrunis" type="text" maxlength="8" name="talrnr" value="" placeholder="26268606" />
+									</fieldset>
+									<button class="btn btn-primary" type="submit" name="action" onclick="return registracijaspoga()" value="pieteikums">Reģistrēties</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+<div class="izvelnes_skats_mazs">
+	<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="izvelnes_virsraksts"><h1>Anketa</h1></div><hr>
+				<form id="anketa">
+				<label for="aktiv">Vai piedalies šajā aktivitātē:</label>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">Jā</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">Nē</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">Vēlētos piedalīties</label>
+				</div>
+				<label for="darb">Redzējis darbībā:</label>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">Neesmu</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">Esmu</label>
+				</div>
+				<label for="radio">Ir pazīstams kāds modeļu būvētājs:</label>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">Neviens</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">1</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">2</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">3</label>
+				</div>
+				<div class="radio">
+				  <label><input type="radio" name="optradio">>3</label>
+				</div>
+				<div class = "form-group">
+										 <label for="vards">Vārds:</label>
+										 <input type = "text" name = "vards" class="form-control" placeholder="Ievadiet vārdu" id ="read4">
+
+
+										 <label for="uzvards">Uzvārds:</label>
+										 <input type = "text" name = "uzvards" class="form-control" placeholder="Ievadiet uzvārdu" id ="read4">
+									</div>
+										<div>
+					<label>Dzimums:</label>
+				<form action="dzim">
+				<label class="radio-inline"><input type="radio" name="dzim">Vīrietis</label>
+				<label class="radio-inline"><input type="radio" name="dzim">Sieviete</label>
+										</select>
+										
+									</div>
+					<div class = "form-group">
+				<label>Modeļu klase:</label>
+					<select class="form-control">
+					<option value="brivlidojosie">Brīvlidojošie</option>
+					<option value="radiovadamie">Radiovadāmie</option>
+					<option value="iekstelpu">Iekštelpu</option>
+				</select>
+				<br/>
+				<label >Lidmodelisms jums:</label>
+										<div class="input-group  has-success" id = "test1">
+										<div class="input-group-addon">1.</div>
+										<input type="text" name = 'correct_answer' class="form-control" placeholder="Ievadiet atbildi" id ="read">
+									</div><br/>
+								<div class="alert alert-success" id = "error">
+									<strong>Neprecīza atbilde!</strong>Ievadiet patīk.
+								</div>
+								<div class="alert alert-success" id = "error1">
+									<strong>Tieši tā!</strong>
+								</div>
+									<label>Miļākās lidmašīnas nosaukums:</label>
+											<div class="input-group has-warning">
+										<div class="input-group-addon">
+										<input type="checkbox">
+										</div>
+										<input type="text" name = 'answer2' class="form-control" placeholder="ievadiet nosaukumu"id="read1">
+									</div>
+									</div>
+									<div class="alert alert-success" id = "error2">
+									<strong>Paldies!</strong>
+								</div>
+									<br/>
+									<label>Tālrunis:</label>
+										<div class="input-group has-warning">
+										<input type="text" name = 'answer3' class="form-control" placeholder="Ievadiet numuru" id="read2">
+									</div>
+									<div class="alert alert-success" id = "error3">
+									<strong>Liels paldies!</strong>
+								</div>
+									<br/>
+									<label>E-pasts:</label>
+										<div class="input-group has-warning">
+										<input type="text" name = 'answer4' class="form-control" placeholder="Ievadiet E-pastu" id="read3">
+									</div><br/>
+					<div>
+					<label for="Piezimes">Piezīmes:</label>
+					<textarea name="mpiezimes" id="mpiezimes" rows="6" cols="50"></textarea>
+					</div>
+					<div id="nosutit">
+					<input type="submit" value="Sūtīt">
+					</div>
+					</div>
+						</form>
+	</div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <br>
+              <div class="col-md-4">
+                <center>
+                  <a href="http://github.com/Lakizap" target="_blank"><img src="faili/github.png" width="120px" height="auto"></a>
+                  <br>
+                  <h4 class="footertext">Github</h4>
+                </center>
+              </div>
+              <div class="col-md-4">
+                <center>
+                  <img src="faili/foot.jpg" width="160px" height="auto">
+                  <br>
+                  <h4 class="footertext">Lakizap</h4>
+                </center>
+              </div>
+              <div class="col-md-4">
+                <center>
+                  <a href="http://www.youtube.com/user/raivx20" target="_blank"><img src="faili/youtube.png" width="70px" height="auto"></a>
+				  <a href="http://www.twitter.com/" target="_blank"><img src="faili/twitter.png" width="70px" height="auto"></a>
+				  <br>
+				  <a href="http://www.facebook.com/raivis.akitis" target="_blank"><img src="faili/facebook.png" width="70px" height="auto"></a>
+				  <a href="http://www.store.steampowered.com/Lakizap" target="_blank"><img src="faili/steam.png" width="70px" height="auto"></a>
+                </center>
+              </div>
+            </div>
+            <div class="row">
+            <p><center><p class="footertext">Raivis 2015</p></center></p>
+        </div>
+    </div>
+	</div>
+	<footer></footer>
+</body>	
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Raivis Akitis D3-3</title>
+	<meta charset="UTF-8">
+	<link rel="icon" href="faili/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+	<header>
+		<div>
+			<img src="faili/logo.jpg"width="200px" height="auto">
+		</div>
+	</header>
+	
+	<link rel="stylesheet" href="faili/boostrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="faili/html5-reset.css">
+	<script src='faili/jQuery/jquerys.js'></script>
+	<script src="faili/boostrap/js/bootstrap.min.js"></script>
+	<script src="faili/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" href="faili/fancybox/jquery.fancybox.css?v=2.1.5" />
+	<script src="faili/skripti.js"></script>
+	<link rel="stylesheet" href="faili/dizains.css">
+	
+	<style>
+		body{background-image:url(faili/back.png)}
+	</style>
+	
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Izvelne</a>
+  </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href = "index.html">Galvena lapa</a></li>
+	  <li class="active"><a href = "galerija.html">Galerija</a></li>
+	  <li><a href = "anketa.html">Anketa</a></li>
+	  <li><a href = "kontakti.html">Kontakti</a></li>
+	  <li><a href = "cv.html">CV</a></li>
+    </ul>
+		<div class="btn-nav navbar-right">
+		<a class="btn btn-primary navbar-btn btn-info" onClick="pieslegsanas();">Pieslēgties</a>
+		</div>
+  </div>
+</nav>
+
+				<div id="pieslogs" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								 <h3 class="modal-title" id="logins">Pieslēgšanās</h3>
+							</div>
+							<div class="modal-body">
+								<p><input type="text" name="epastslog" id="log_epasts" placeholder="E-pasts" /></p><br>
+								<p><input type="password" name="parolelog" id="log_parole" placeholder="Parole" /></p><br>
+								<p>
+								<button type="submit" onclick="return ielogosanaspoga()" class="btn btn-primary">Ieiet</button>
+										<input id="login-remember" type="checkbox" name="remember" value="1"> Atcerēties mani
+								</p><br>
+								<a href="aaa;">Nevari pievienoties?</a>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<p>
+									<a href="javascript:;" class="btn btn-primary" onClick="registracija();">Reģistrējies</a>
+								</div>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="reglogs" class="modal fade" role="dialog">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">x</button>
+								<h3>Reģistrācija</h3>
+							</div>
+							<div class="modal-body">
+									<fieldset class="form-group">
+										<label>E-pasts</label>
+										<input id="iev_epasts" type="text" name="epasts" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Vārds</label>
+										<input id="iev_vards" type="text" name="vards" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Uzvārds</label>
+										<input id="iev_uzvards" type="text" name="uzvards" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Parole</label>
+										<input id="iev_parole" type="password" maxlength="24" name="parole" value=""/>
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Atkārtota Parole</label>
+										<input id="iev_parole2" type="password" maxlength="24" name="parole" value="" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Vīrietis</label>
+										<input id="iev_dzimums" onClick="" type="radio" name="dzimums" checked />
+										<label>Sieviete</label>
+										<input id="iev_dzimums" onClick="" type="radio" name="dzimums" />
+									</fieldset>
+									<fieldset class="form-group">
+										<label>Tālrunis</label>
+										<input id="iev_talrunis" type="text" maxlength="8" name="talrnr" value="" placeholder="26268606" />
+									</fieldset>
+									<button class="btn btn-primary" type="submit" name="action" onclick="return registracijaspoga()" value="pieteikums">Reģistrēties</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+<div class="izvelnes_skats_mazs">
+	<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="izvelnes_virsraksts"><h1>Galerija</h1></div><hr>
+				<div class="izvelnes_galerija_atteli">
+					<p>Notikumi</p>
+					<a class="fancybox" href="faili\galerija\lidm1.jpg" data-fancybox-group="gallery" title="Lidmodeļa pacelšana gaisā"><img src="faili\galerija\lidm1.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox" href="faili\galerija\lidm2.jpg" data-fancybox-group="gallery" title="TMS komandas kopbilde"><img src="faili\galerija\lidm2.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox" href="faili\galerija\lidm3.jpg" data-fancybox-group="gallery" title="Apbalvošana"><img src="faili\galerija\lidm3.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox" href="faili\galerija\lidm4.jpg" data-fancybox-group="gallery" title="Pēc balvu saņemšanas"><img src="faili\galerija\lidm4.jpg" width="200" height= auto alt="" /></a>
+					<hr>
+					<p>Darbības</p>
+					<a class="fancybox-a" href="faili\galerija\lidm5.jpg" data-fancybox-group="gallery" title="Gājiens uz startiem"><img src="faili\galerija\lidm5.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox-a" href="faili\galerija\lidm6.jpg" data-fancybox-group="gallery" title="Modeļa pārbaude pirms pacelšanas gaisā"><img src="faili\galerija\lidm6.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox-a" href="faili\galerija\lidm7.jpg" data-fancybox-group="gallery" title="Atpūta"><img src="faili\galerija\lidm7.jpg" width="200" height= auto alt="" /></a>
+					<hr>
+					<p>Aktivitātes</p>
+					<a class="fancybox-b" href="faili\galerija\lidm8.jpg" data-fancybox-group="gallery" title="Klusā daba"><img src="faili\galerija\lidm8.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox-b" href="faili\galerija\lidm9.jpg" data-fancybox-group="gallery" title="Mazie lidmodelisti"><img src="faili\galerija\lidm9.jpg" width="200" height= auto alt="" /></a>
+
+					<a class="fancybox-b" href="faili\galerija\lidm10.jpg" data-fancybox-group="gallery" title="Modeļa lidojums"><img src="faili\galerija\lidm10.jpg" width="200" height= auto alt="" /></a>
+					<hr>
+					<p>Video</p>
+					<div class="embed-responsive embed-responsive-16by9" >
+						<iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/b1PnCsMW-jo" allowfullscreen></iframe>
+					</div>
+			</div>
+			</div>
+			</div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <br>
+              <div class="col-md-4">
+                <center>
+                  <a href="http://github.com/Lakizap" target="_blank"><img src="faili/github.png" width="120px" height="auto"></a>
+                  <br>
+                  <h4 class="footertext">Github</h4>
+                </center>
+              </div>
+              <div class="col-md-4">
+                <center>
+                  <img src="faili/foot.jpg" width="160px" height="auto">
+                  <br>
+                  <h4 class="footertext">Lakizap</h4>
+                </center>
+              </div>
+              <div class="col-md-4">
+                <center>
+                  <a href="http://www.youtube.com/user/raivx20" target="_blank"><img src="faili/youtube.png" width="70px" height="auto"></a>
+				  <a href="http://www.twitter.com/" target="_blank"><img src="faili/twitter.png" width="70px" height="auto"></a>
+				  <br>
+				  <a href="http://www.facebook.com/raivis.akitis" target="_blank"><img src="faili/facebook.png" width="70px" height="auto"></a>
+				  <a href="http://www.store.steampowered.com/Lakizap" target="_blank"><img src="faili/steam.png" width="70px" height="auto"></a>
+                </center>
+              </div>
+            </div>
+            <div class="row">
+            <p><center><p class="footertext">Raivis 2015</p></center></p>
+        </div>
+    </div>
+	</div>
+	<footer></footer>
+</body>	
+</html>

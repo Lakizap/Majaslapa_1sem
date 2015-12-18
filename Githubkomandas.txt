@@ -1,0 +1,17 @@
+Pirmais projekts
+cd /c/Users/TEMP.RVT.000/Desktop/123
+git init
+git add *
+git commit -am "Faili"
+git remote add origin adrese.git
+git push -u origin master
+---------------------------
+Pull
+git pull -u origin master
+---------------------------
+Push
+cd /c/Users/TEMP.RVT.000/Desktop/123
+cd /F/Darbavirsma/Raivis_Akitis_D33_1812
+git add *
+git commit -am "Faili"
+git push -u origin master
